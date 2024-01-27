@@ -6,6 +6,14 @@ const machineScore = document.querySelector('#machine-score')
 let humanScoreNumber = 0
 let machineScoreNumber = 0
 
+
+
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+}
+
 //usando uma function normal
 function playHuman(humanChoice) {
 
@@ -17,7 +25,7 @@ function playHuman(humanChoice) {
 
 //usando uma arrowFunction
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors']
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
 
     //sorteia um numero aleatório entre 0 e 1 e arredonda para baixo
     const randomNumber = Math.floor(Math.random() * 3)
